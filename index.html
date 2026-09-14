@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rahul Rai | Advocate</title>
+    <meta name="description" content="Rahul Rai - Advocate, Dhanghata, Sant Kabir Nagar. Legal services and consultation.">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: #f8f7f3;
+            color: #222;
+            line-height: 1.7;
+        }
+
+        /* NAVBAR */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(10, 20, 32, 0.96);
+            border-bottom: 1px solid rgba(201, 164, 92, 0.3);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: auto;
+            height: 78px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 25px;
+        }
+
+        .logo {
+            color: #d4af68;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 30px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #d4af68;
+        }
+
+        .menu-btn {
+            display: none;
+            color: white;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 100vh;
+            background:
+                linear-gradient(rgba(7, 16, 28, 0.78), rgba(7, 16, 28, 0.88)),
+                url("https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=2000&q=85");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            padding: 120px 25px 80px;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            width: 100%;
+            margin: auto;
+            color: white;
+        }
+
+        .hero-small {
+            color: #d4af68;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            font-size: 13px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(60px, 9vw, 115px);
+            line-height: 0.9;
+            font-weight: 600;
+            margin-bottom: 25px;
+        }
+
+        .hero h2 {
+            font-size: 20px;
+            font-weight: 400;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: #e8e8e8;
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            max-width: 600px;
+            color: #ddd;
+            font-size: 16px;
+            margin-bottom: 35px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 28px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 1.5px;
+            transition: 0.3s;
+        }
+
+        .btn-gold {
+            background: #c9a45c;
+            color: #101a27;
+        }
+
+        .btn-gold:hover {
+            background: #e0c27c;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 1px solid #d4af68;
+            color: white;
+        }
+
+        .btn-outline:hover {
+            background: #d4af68;
+            color: #111;
+        }
+
+        /* GENERAL */
+        section {
+            padding: 100px 25px;
+        }
+
+        .container {
+            max-width: 1150px;
+            margin: auto;
+        }
+
+        .section-label {
+            color: #b38b45;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 55px;
+            line-height: 1;
+            color: #101a27;
+            margin-bottom: 25px;
+        }
+
+        /* ABOUT */
+        .about {
+            background: #fff;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.3fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .about-image {
+            min-height: 500px;
+            background:
+                linear-gradient(rgba(15, 27, 42, 0.25), rgba(15, 27, 42, 0.25)),
+                url("https://images.unsplash.com/photo-1555374018-13a8994ab246?auto=format&fit=crop&w=900&q=80");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .about-text p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .gold-line {
+            width: 70px;
+            height: 2px;
+            background: #c9a45c;
+            margin: 25px 0;
+        }
+
+        /* PRACTICE */
+        .practice {
+            background: #f2f0ea;
+        }
+
+        .practice-intro {
+            max-width: 650px;
+            color: #666;
+            margin-bottom: 50px;
+        }
+
+        .practice-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2px;
+        }
+
+        .practice-card {
+            background: #101a27;
+            color: white;
+            padding: 45px 30px;
+            min-height: 220px;
+            transition: 0.3s;
+            border-bottom: 2px solid transparent;
+        }
+
+        .practice-card:hover {
+            transform: translateY(-6px);
+            border-bottom: 2px solid #c9a45c;
+        }
+
+        .number {
+            color: #c9a45c;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 25px;
+        }
+
+        .practice-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 29px;
+            margin: 15px 0;
+        }
+
+        .practice-card p {
+            color: #bbb;
+            font-size: 14px;
+        }
+
+        /* QUOTE */
+        .quote {
+            background: #101a27;
+            text-align: center;
+            color: white;
+        }
+
+        .quote h2 {
+            max-width: 850px;
+            margin: auto;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(38px, 5vw, 65px);
+            line-height: 1.1;
+            font-weight: 500;
+        }
+
+        .quote span {
+            display: block;
+            color: #c9a45c;
+            margin-top: 25px;
+            font-size: 12px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        /* CONTACT */
+        .contact {
+            background: white;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+        }
+
+        .contact-info {
+            margin-top: 30px;
+        }
+
+        .contact-item {
+            margin-bottom: 25px;
+        }
+
+        .contact-item strong {
+            display: block;
+            color: #b38b45;
+            text-transform: uppercase;
+            font-size: 11px;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+        }
+
+        .contact-item a,
+        .contact-item span {
+            color: #333;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .contact-form {
+            background: #f4f2ed;
+            padding: 40px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid #bbb;
+            background: transparent;
+            padding: 15px 5px;
+            margin-bottom: 20px;
+            font-family: inherit;
+            outline: none;
+        }
+
+        .contact-form textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .contact-form button {
+            border: none;
+            cursor: pointer;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #08111d;
+            color: #aaa;
+            padding: 45px 25px;
+            text-align: center;
+        }
+
+        footer .footer-name {
+            font-family: 'Cormorant Garamond', serif;
+            color: #d4af68;
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        footer p {
+            font-size: 12px;
+            margin-top: 15px;
+        }
+
+        .disclaimer {
+            max-width: 850px;
+            margin: 25px auto 0;
+            color: #777;
+            font-size: 10px;
+        }
+
+        /* WHATSAPP */
+        .whatsapp {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+            width: 58px;
+            height: 58px;
+            background: #25d366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 27px;
+            z-index: 999;
+            box-shadow: 0 5px 20px rgba(0,0,0,.25);
+        }
+
+        /* MOBILE */
+        @media (max-width: 800px) {
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 78px;
+                left: 0;
+                width: 100%;
+                background: #101a27;
+                flex-direction: column;
+                padding: 25px;
+                gap: 20px;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .about-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .about-image {
+                min-height: 350px;
+            }
+
+            .practice-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 45px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<header>
+    <nav>
+        <div class="logo">RAHUL RAI</div>
+
+        <div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#practice">Practice Areas</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<!-- HERO -->
+<section class="hero" id="home">
+    <div class="hero-content">
+
+        <div class="hero-small">Legal Professional</div>
+
+        <h1>Rahul Rai</h1>
+
+        <h2>Advocate</h2>
+
+        <p>
+            Providing professional legal assistance with a commitment
+            to integrity, responsibility and the pursuit of justice.
+        </p>
+
+        <div class="buttons">
+            <a href="#contact" class="btn btn-gold">
+                Contact Me
+            </a>
+
+            <a href="tel:9794442858" class="btn btn-outline">
+                Call Now
+            </a>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ABOUT -->
+<section class="about" id="about">
+    <div class="container">
+
+        <div class="about-grid">
+
+            <div class="about-image"></div>
+
+            <div class="about-text">
+
+                <div class="section-label">About</div>
+
+                <h2 class="section-title">
+                    A commitment to<br>
+                    legal excellence.
+                </h2>
+
+                <div class="gold-line"></div>
+
+                <p>
+                    Welcome to the official website of Rahul Rai.
+                    This platform is designed to provide information
+                    about legal services and professional assistance.
+                </p>
+
+                <p>
+                    Based in Dhanghata, Sant Kabir Nagar, Rahul Rai
+                    is committed to approaching legal matters with
+                    professionalism, integrity and dedication.
+                </p>
+
+                <p>
+                    For legal enquiries or consultation-related
+                    information, please get in touch using the
+                    contact details provided below.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- PRACTICE AREAS -->
+<section class="practice" id="practice">
+
+    <div class="container">
+
+        <div class="section-label">Areas of Practice</div>
+
+        <h2 class="section-title">
+            Legal Services
+        </h2>
+
+        <p class="practice-intro">
+            Legal assistance can vary depending upon the facts and
+            circumstances of each matter. The following areas can be
+            expanded as your professional practice develops.
+        </p>
+
+
+        <div class="practice-grid">
+
+            <div class="practice-card">
+                <div class="number">01</div>
+                <h3>Civil Law</h3>
+                <p>
+                    Assistance relating to civil disputes and
+                    related legal matters.
+                </p>
+            </div>
+
+
+            <div class="practice-card">
+                <div class="number">02</div>
+                <h3>Criminal Law</h3>
+                <p>
+                    Legal assistance in criminal matters,
+                    subject to the facts of each case.
+                </p>
+            </div>
+
+
+            <div class="practice-card">
+                <div class="number">03</div>
+                <h3>Family Law</h3>
+                <p>
+                    Assistance concerning family and
+                    matrimonial legal matters.
+                </p>
+            </div>
+
+
+            <div class="practice-card">
+                <div class="number">04</div>
+                <h3>Property Matters</h3>
+                <p>
+                    Assistance regarding property-related
+                    disputes and documentation.
+                </p>
+            </div>
+
+
+            <div class="practice-card">
+                <div class="number">05</div>
+                <h3>Consumer Matters</h3>
+                <p>
+                    Assistance concerning consumer disputes
+                    and related legal remedies.
+                </p>
+            </div>
+
+
+            <div class="practice-card">
+                <div class="number">06</div>
+                <h3>Legal Consultation</h3>
+                <p>
+                    Initial discussion and guidance based on
+                    the information provided by the client.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- QUOTE -->
+<section class="quote">
+
+    <h2>
+        “Justice is not merely about winning a case,
+        but about understanding the law and protecting rights.”
+    </h2>
+
+    <span>Rahul Rai</span>
+
+</section>
+
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+
+    <div class="container">
+
+        <div class="contact-grid">
+
+            <div>
+
+                <div class="section-label">Get In Touch</div>
+
+                <h2 class="section-title">
+                    Let's discuss<br>
+                    your legal matter.
+                </h2>
+
+                <div class="contact-info">
+
+                    <div class="contact-item">
+                        <strong>Phone</strong>
+                        <a href="tel:9794442858">
+                            +91 97944 42858
+                        </a>
+                    </div>
+
+                    <div class="contact-item">
+                        <strong>Email</strong>
+                        <a href="mailto:rahulrairai134@gmail.com">
+                            rahulrairai134@gmail.com
+                        </a>
+                    </div>
+
+                    <div class="contact-item">
+                        <strong>Location</strong>
+                        <span>
+                            Dhanghata, Sant Kabir Nagar,
+                            Uttar Pradesh, India
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="contact-form">
+
+                <form onsubmit="sendWhatsApp(event)">
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Your Name"
+                        required
+                    >
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        placeholder="Your Phone Number"
+                        required
+                    >
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Your Email"
+                    >
+
+                    <textarea
+                        id="message"
+                        placeholder="Briefly describe your enquiry..."
+                        required
+                    ></textarea>
+
+                    <button class="btn btn-gold" type="submit">
+                        Send Enquiry
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <div class="footer-name">
+        RAHUL RAI
+    </div>
+
+    <div>Advocate</div>
+
+    <p>
+        © 2026 Rahul Rai. All Rights Reserved.
+    </p>
+
+    <div class="disclaimer">
+        DISCLAIMER: The information contained on this website
+        is intended for general informational purposes only and
+        should not be construed as legal advice. Visiting this
+        website or communicating through it does not create an
+        advocate-client relationship.
+    </div>
+
+</footer>
+
+
+<!-- WHATSAPP -->
+<a
+    class="whatsapp"
+    href="https://wa.me/919794442858"
+    target="_blank"
+    title="Chat on WhatsApp"
+>
+    ☎
+</a>
+
+
+<script>
+
+    // Mobile Menu
+    function toggleMenu() {
+        document
+            .getElementById("navLinks")
+            .classList.toggle("active");
+    }
+
+
+    // WhatsApp Enquiry
+    function sendWhatsApp(event) {
+
+        event.preventDefault();
+
+        const name =
+            document.getElementById("name").value;
+
+        const phone =
+            document.getElementById("phone").value;
+
+        const email =
+            document.getElementById("email").value;
+
+        const message =
+            document.getElementById("message").value;
+
+
+        const text =
+            "Legal Enquiry%0A%0A" +
+            "Name: " + encodeURIComponent(name) +
+            "%0APhone: " + encodeURIComponent(phone) +
+            "%0AEmail: " + encodeURIComponent(email) +
+            "%0A%0AMessage:%0A" +
+            encodeURIComponent(message);
+
+
+        window.open(
+            "https://wa.me/919794442858?text=" + text,
+            "_blank"
+        );
+    }
+
+</script>
+
+</body>
+</html>
