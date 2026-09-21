@@ -1,28 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="google-site-verification" content="J2UTtAd2zWaHhOMksTRis8wgG1sigmWtEl3LoJVdriw">
+<meta name="google-site-verification"
+content="J2UTtAd2zWaHhOMksTRis8wgG1sigmWtEl3LoJVdriw">
 
 <title>Rahul Rai | Advocate</title>
 
-<meta name="description" content="Rahul Rai - Advocate, Dhanghata, Sant Kabir Nagar. Legal services and consultation.">
+<meta name="description"
+content="Rahul Rai - Advocate, Dhanghata, Sant Kabir Nagar. Legal services and consultation.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+rel="stylesheet">
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
+
 <style>
 
-/* =========================
+/* =====================================================
    GLOBAL
-========================= */
+===================================================== */
 
 *{
     margin:0;
@@ -42,12 +52,18 @@ body{
 }
 
 :root{
+
     --navy:#0a1420;
+
     --navy2:#101a27;
+
     --gold:#d4af68;
+
     --gold2:#b38b45;
+
     --cream:#f8f7f3;
-    --white:#fff;
+
+    --white:#ffffff;
 }
 
 a{
@@ -60,57 +76,87 @@ img{
 }
 
 
-/* =========================
+/* =====================================================
    NAVBAR
-========================= */
+===================================================== */
 
 header{
+
     position:fixed;
+
     top:0;
+
     width:100%;
+
     z-index:1000;
+
     background:rgba(7,14,23,.96);
+
     backdrop-filter:blur(12px);
-    border-bottom:1px solid rgba(212,175,104,.25);
+
+    border-bottom:
+    1px solid
+    rgba(212,175,104,.25);
 }
 
 nav{
+
     max-width:1200px;
+
     height:78px;
+
     margin:auto;
+
     padding:0 25px;
 
     display:flex;
+
     align-items:center;
+
     justify-content:space-between;
 }
 
+
+/* LOGO */
+
 .brand{
+
     display:flex;
+
     align-items:center;
+
     gap:12px;
+
     color:white;
 }
 
 .brand-photo{
+
     width:48px;
+
     height:48px;
 
     border-radius:50%;
 
     object-fit:cover;
+
     object-position:center top;
 
     border:2px solid var(--gold);
 
     box-shadow:
-    0 0 0 3px rgba(212,175,104,.12);
+    0 0 0 3px
+    rgba(212,175,104,.12);
 }
 
 .brand-text{
-    font-family:'Cormorant Garamond',serif;
+
+    font-family:
+    'Cormorant Garamond',
+    serif;
 
     font-size:25px;
+
     font-weight:700;
 
     letter-spacing:1.5px;
@@ -119,6 +165,7 @@ nav{
 }
 
 .brand-text small{
+
     display:block;
 
     font-family:'Montserrat',sans-serif;
@@ -132,7 +179,11 @@ nav{
     margin-top:-4px;
 }
 
+
+/* NAV LINKS */
+
 .nav-links{
+
     display:flex;
 
     gap:30px;
@@ -141,6 +192,7 @@ nav{
 }
 
 .nav-links a{
+
     color:#fff;
 
     font-size:12px;
@@ -153,10 +205,15 @@ nav{
 }
 
 .nav-links a:hover{
+
     color:var(--gold);
 }
 
+
+/* MOBILE MENU */
+
 .menu-btn{
+
     display:none;
 
     color:#fff;
@@ -167,27 +224,26 @@ nav{
 }
 
 
-/* =========================
+/* =====================================================
    HERO
-========================= */
+===================================================== */
 
 .hero{
 
     min-height:100vh;
 
     background:
-    radial-gradient(
-        circle at 80% 40%,
-        rgba(212,175,104,.10),
-        transparent 30%
-    ),
 
     linear-gradient(
-        120deg,
-        #060b12 0%,
-        #101722 55%,
-        #090d14 100%
-    );
+        rgba(5,12,20,.88),
+        rgba(5,12,20,.94)
+    ),
+
+    url("https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=2000&q=85");
+
+    background-size:cover;
+
+    background-position:center;
 
     display:flex;
 
@@ -201,6 +257,7 @@ nav{
     overflow:hidden;
 }
 
+
 .hero-inner{
 
     max-width:1200px;
@@ -212,14 +269,18 @@ nav{
     display:grid;
 
     grid-template-columns:
-    1.05fr .95fr;
+    1fr 1fr;
 
     align-items:center;
 
-    gap:50px;
+    gap:60px;
 }
 
+
+/* HERO TEXT */
+
 .hero-content{
+
     color:white;
 }
 
@@ -238,7 +299,9 @@ nav{
 
 .hero h1{
 
-    font-family:'Cormorant Garamond',serif;
+    font-family:
+    'Cormorant Garamond',
+    serif;
 
     font-size:
     clamp(64px,8vw,108px);
@@ -269,12 +332,29 @@ nav{
 
     max-width:600px;
 
-    color:#c9ced4;
+    color:#d0d4d8;
 
     font-size:15px;
 
     margin-bottom:32px;
 }
+
+
+/* GOLD LINE */
+
+.gold-line{
+
+    width:70px;
+
+    height:2px;
+
+    background:var(--gold);
+
+    margin:24px 0;
+}
+
+
+/* BUTTONS */
 
 .buttons{
 
@@ -339,9 +419,9 @@ nav{
 }
 
 
-/* =========================
-   HERO PHOTO
-========================= */
+/* =====================================================
+   HERO LEGAL IMAGE
+===================================================== */
 
 .hero-photo-wrap{
 
@@ -351,8 +431,38 @@ nav{
 
     justify-content:center;
 
-    align-items:flex-end;
+    align-items:center;
+
+    min-height:520px;
 }
+
+.hero-photo{
+
+    width:100%;
+
+    max-width:520px;
+
+    height:520px;
+
+    object-fit:cover;
+
+    object-position:center;
+
+    border:
+    1px solid
+    rgba(212,175,104,.45);
+
+    box-shadow:
+    0 30px 80px
+    rgba(0,0,0,.55);
+
+    filter:
+    brightness(.85)
+    saturate(.85);
+}
+
+
+/* HERO IMAGE FRAME */
 
 .hero-photo-wrap:before{
 
@@ -360,66 +470,64 @@ nav{
 
     position:absolute;
 
-    width:390px;
+    width:470px;
 
-    height:390px;
+    height:470px;
 
-    border:1px solid rgba(212,175,104,.35);
+    border:
+    1px solid
+    rgba(212,175,104,.35);
 
-    border-radius:50%;
+    right:0;
 
-    right:8%;
+    top:20px;
 
-    top:7%;
-
-    box-shadow:
-    0 0 70px rgba(212,175,104,.08);
+    z-index:0;
 }
 
 .hero-photo{
 
     position:relative;
 
-    width:min(100%,560px);
-
-    height:610px;
-
-    object-fit:cover;
-
-    object-position:center top;
-
-    border-radius:2px;
-
-    filter:saturate(.92);
-
-    box-shadow:
-    0 25px 70px rgba(0,0,0,.45);
+    z-index:1;
 }
+
+
+/* HERO TAG */
 
 .photo-tag{
 
     position:absolute;
 
-    right:10px;
+    right:15px;
 
-    bottom:25px;
+    bottom:35px;
 
-    background:rgba(10,20,32,.92);
+    background:
+    rgba(10,20,32,.94);
 
-    border-left:3px solid var(--gold);
+    border-left:
+    3px solid
+    var(--gold);
 
     padding:15px 20px;
 
     color:white;
 
     z-index:2;
+
+    box-shadow:
+    0 10px 30px
+    rgba(0,0,0,.35);
 }
 
 .photo-tag strong{
 
     display:block;
 
-    font-family:'Cormorant Garamond',serif;
+    font-family:
+    'Cormorant Garamond',
+    serif;
 
     font-size:24px;
 
@@ -436,11 +544,12 @@ nav{
 }
 
 
-/* =========================
-   COMMON
-========================= */
+/* =====================================================
+   COMMON SECTIONS
+===================================================== */
 
 section{
+
     padding:100px 25px;
 }
 
@@ -468,7 +577,9 @@ section{
 
 .section-title{
 
-    font-family:'Cormorant Garamond',serif;
+    font-family:
+    'Cormorant Garamond',
+    serif;
 
     font-size:55px;
 
@@ -479,23 +590,13 @@ section{
     margin-bottom:24px;
 }
 
-.gold-line{
 
-    width:70px;
-
-    height:2px;
-
-    background:var(--gold);
-
-    margin:24px 0;
-}
-
-
-/* =========================
+/* =====================================================
    ABOUT
-========================= */
+===================================================== */
 
 .about{
+
     background:#fff;
 }
 
@@ -503,12 +604,16 @@ section{
 
     display:grid;
 
-    grid-template-columns:.85fr 1.15fr;
+    grid-template-columns:
+    .85fr 1.15fr;
 
     gap:70px;
 
     align-items:center;
 }
+
+
+/* ABOUT PHOTO */
 
 .about-photo-box{
 
@@ -544,10 +649,15 @@ section{
 
     height:100%;
 
-    border:1px solid var(--gold);
+    border:
+    1px solid
+    var(--gold);
 
     z-index:0;
 }
+
+
+/* ABOUT TEXT */
 
 .about-text p{
 
@@ -557,6 +667,9 @@ section{
 
     font-size:15px;
 }
+
+
+/* CREDENTIALS */
 
 .credentials{
 
@@ -575,7 +688,9 @@ section{
 
     background:#f4f1e9;
 
-    border-left:2px solid var(--gold);
+    border-left:
+    2px solid
+    var(--gold);
 
     font-size:11px;
 
@@ -585,9 +700,9 @@ section{
 }
 
 
-/* =========================
+/* =====================================================
    PRACTICE AREAS
-========================= */
+===================================================== */
 
 .practice{
 
@@ -625,32 +740,41 @@ section{
 
     transition:.3s;
 
-    border-bottom:2px solid transparent;
+    border-bottom:
+    2px solid
+    transparent;
 }
 
 .practice-card:hover{
 
     transform:translateY(-6px);
 
-    border-bottom-color:var(--gold);
+    border-bottom-color:
+    var(--gold);
 }
 
 .number{
 
     color:var(--gold);
 
-    font-family:'Cormorant Garamond',serif;
+    font-family:
+    'Cormorant Garamond',
+    serif;
 
     font-size:24px;
 }
 
 .practice-card h3{
 
-    font-family:'Cormorant Garamond',serif;
+    font-family:
+    'Cormorant Garamond',
+    serif;
 
     font-size:29px;
 
-    margin:13px 0 10px;
+    margin:
+    13px 0
+    10px;
 }
 
 .practice-card p{
@@ -661,9 +785,9 @@ section{
 }
 
 
-/* =========================
+/* =====================================================
    QUOTE
-========================= */
+===================================================== */
 
 .quote{
 
@@ -682,7 +806,9 @@ section{
 
     margin:auto;
 
-    font-family:'Cormorant Garamond',serif;
+    font-family:
+    'Cormorant Garamond',
+    serif;
 
     font-size:
     clamp(38px,5vw,64px);
@@ -708,11 +834,12 @@ section{
 }
 
 
-/* =========================
+/* =====================================================
    CONTACT
-========================= */
+===================================================== */
 
 .contact{
+
     background:#fff;
 }
 
@@ -720,7 +847,8 @@ section{
 
     display:grid;
 
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:
+    1fr 1fr;
 
     gap:70px;
 }
@@ -763,6 +891,9 @@ section{
     color:var(--gold2);
 }
 
+
+/* CONTACT FORM */
+
 .contact-form{
 
     background:#f4f2ed;
@@ -777,7 +908,8 @@ section{
 
     border:none;
 
-    border-bottom:1px solid #bbb;
+    border-bottom:
+    1px solid #bbb;
 
     background:transparent;
 
@@ -795,7 +927,8 @@ section{
 .contact-form input:focus,
 .contact-form textarea:focus{
 
-    border-bottom-color:var(--gold2);
+    border-bottom-color:
+    var(--gold2);
 }
 
 .contact-form textarea{
@@ -813,9 +946,9 @@ section{
 }
 
 
-/* =========================
+/* =====================================================
    FOOTER
-========================= */
+===================================================== */
 
 footer{
 
@@ -830,7 +963,9 @@ footer{
 
 .footer-name{
 
-    font-family:'Cormorant Garamond',serif;
+    font-family:
+    'Cormorant Garamond',
+    serif;
 
     color:var(--gold);
 
@@ -856,7 +991,9 @@ footer .social a{
 
     height:38px;
 
-    border:1px solid rgba(212,175,104,.4);
+    border:
+    1px solid
+    rgba(212,175,104,.4);
 
     border-radius:50%;
 
@@ -875,7 +1012,8 @@ footer .social a:hover{
 
     color:var(--gold);
 
-    border-color:var(--gold);
+    border-color:
+    var(--gold);
 }
 
 footer p{
@@ -897,9 +1035,9 @@ footer p{
 }
 
 
-/* =========================
+/* =====================================================
    FLOATING BUTTONS
-========================= */
+===================================================== */
 
 .whatsapp,
 .call-float{
@@ -922,14 +1060,13 @@ footer p{
 
     color:white;
 
-    text-decoration:none;
-
     font-size:23px;
 
     z-index:999;
 
     box-shadow:
-    0 5px 20px rgba(0,0,0,.25);
+    0 5px 20px
+    rgba(0,0,0,.25);
 
     transition:.3s;
 }
@@ -955,9 +1092,9 @@ footer p{
 }
 
 
-/* =========================
+/* =====================================================
    MOBILE
-========================= */
+===================================================== */
 
 @media(max-width:850px){
 
@@ -1011,6 +1148,9 @@ footer p{
         display:block;
     }
 
+
+    /* HERO MOBILE */
+
     .hero{
 
         padding-top:110px;
@@ -1040,9 +1180,14 @@ footer p{
         justify-content:center;
     }
 
+    .hero-photo-wrap{
+
+        min-height:430px;
+    }
+
     .hero-photo{
 
-        height:520px;
+        height:430px;
 
         max-width:500px;
     }
@@ -1051,6 +1196,9 @@ footer p{
 
         display:none;
     }
+
+
+    /* ABOUT */
 
     .about-grid,
     .contact-grid{
@@ -1065,6 +1213,9 @@ footer p{
         height:450px;
     }
 
+
+    /* PRACTICE */
+
     .practice-grid{
 
         grid-template-columns:1fr;
@@ -1074,12 +1225,13 @@ footer p{
 
         font-size:46px;
     }
+
 }
 
 
-/* =========================
+/* =====================================================
    SMALL MOBILE
-========================= */
+===================================================== */
 
 @media(max-width:500px){
 
@@ -1109,7 +1261,7 @@ footer p{
 
     .hero-photo{
 
-        height:430px;
+        height:360px;
     }
 
     .about-photo{
@@ -1133,22 +1285,25 @@ footer p{
 
         bottom:84px;
     }
+
 }
 
 </style>
+
 </head>
 
 
 <body>
 
 
-<!-- =========================
+<!-- =====================================================
      NAVIGATION
-========================= -->
+===================================================== -->
 
 <header>
 
 <nav>
+
 
 <a href="#home" class="brand">
 
@@ -1156,6 +1311,7 @@ footer p{
 src="rahul-rai.png"
 class="brand-photo"
 alt="Rahul Rai Advocate">
+
 
 <span class="brand-text">
 
@@ -1168,6 +1324,7 @@ RAHUL RAI
 </a>
 
 
+
 <div
 class="menu-btn"
 onclick="toggleMenu()">
@@ -1177,35 +1334,66 @@ onclick="toggleMenu()">
 </div>
 
 
+
 <ul
 class="nav-links"
 id="navLinks">
 
+
 <li>
-<a href="#home" onclick="closeMenu()">
+
+<a
+href="#home"
+onclick="closeMenu()">
+
 Home
+
 </a>
+
 </li>
 
+
 <li>
-<a href="#about" onclick="closeMenu()">
+
+<a
+href="#about"
+onclick="closeMenu()">
+
 About
+
 </a>
+
 </li>
 
+
 <li>
-<a href="#practice" onclick="closeMenu()">
+
+<a
+href="#practice"
+onclick="closeMenu()">
+
 Practice Areas
+
 </a>
+
 </li>
 
+
 <li>
-<a href="#contact" onclick="closeMenu()">
+
+<a
+href="#contact"
+onclick="closeMenu()">
+
 Contact
+
 </a>
+
 </li>
+
 
 </ul>
+
 
 </nav>
 
@@ -1213,44 +1401,61 @@ Contact
 
 
 
-<!-- =========================
+<!-- =====================================================
      HERO
-========================= -->
+===================================================== -->
 
 <section
 class="hero"
 id="home">
+
 
 <div class="hero-inner">
 
 
 <div class="hero-content">
 
+
 <div class="hero-small">
+
 Legal Professional
+
 </div>
 
 
+
 <h1>
+
 Rahul Rai
+
 </h1>
 
 
+
 <h2>
+
 Advocate
+
 </h2>
+
 
 
 <div class="gold-line"></div>
 
 
+
 <p>
-Providing professional legal assistance with a commitment
-to integrity, responsibility and the pursuit of justice.
+
+Providing professional legal assistance
+with a commitment to integrity,
+responsibility and the pursuit of justice.
+
 </p>
 
 
+
 <div class="buttons">
+
 
 <a
 href="#contact"
@@ -1263,6 +1468,7 @@ Contact Me
 </a>
 
 
+
 <a
 href="tel:9794442858"
 class="btn btn-outline">
@@ -1273,33 +1479,49 @@ Call Now
 
 </a>
 
-</div>
 
 </div>
 
 
+</div>
 
-<!-- HERO PHOTO -->
+
+
+<!-- =====================================================
+     HERO LEGAL IMAGE
+===================================================== -->
 
 <div class="hero-photo-wrap">
 
+
 <img
-src="rahul-rai.png"
+
+src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1000&q=85"
+
 class="hero-photo"
-alt="Rahul Rai - Advocate">
+
+alt="Legal Professional">
 
 
 <div class="photo-tag">
 
+
 <strong>
+
 Rahul Rai
+
 </strong>
 
+
 <span>
+
 Advocate · Legal Professional
+
 </span>
 
+
 </div>
+
 
 </div>
 
@@ -1310,25 +1532,34 @@ Advocate · Legal Professional
 
 
 
-<!-- =========================
+<!-- =====================================================
      ABOUT
-========================= -->
+===================================================== -->
 
 <section
 class="about"
 id="about">
 
+
 <div class="container">
+
 
 <div class="about-grid">
 
 
+<!-- YOUR ACTUAL PHOTO -->
+
 <div class="about-photo-box">
 
+
 <img
+
 src="rahul-rai.png"
+
 class="about-photo"
+
 alt="Rahul Rai Advocate">
+
 
 </div>
 
@@ -1336,9 +1567,13 @@ alt="Rahul Rai Advocate">
 
 <div class="about-text">
 
+
 <div class="section-label">
+
 About
+
 </div>
+
 
 
 <h2 class="section-title">
@@ -1351,50 +1586,74 @@ legal excellence.
 </h2>
 
 
+
 <div class="gold-line"></div>
 
 
+
 <p>
+
 Welcome to the official website of Rahul Rai.
 This platform is designed to provide information
 about legal services and professional assistance.
+
 </p>
 
 
+
 <p>
-Based in Dhanghata, Sant Kabir Nagar, Rahul Rai
-is committed to approaching legal matters with
-professionalism, integrity and dedication.
+
+Based in Dhanghata, Sant Kabir Nagar,
+Rahul Rai is committed to approaching
+legal matters with professionalism,
+integrity and dedication.
+
 </p>
 
 
+
 <p>
+
 For legal enquiries or consultation-related
 information, please get in touch using the
 contact details provided below.
+
 </p>
+
 
 
 <div class="credentials">
 
+
 <div class="credential">
+
 Professional Legal Assistance
+
 </div>
 
+
 <div class="credential">
+
 Client-Focused Approach
+
 </div>
+
 
 <div class="credential">
+
 Confidential Consultation
-</div>
 
 </div>
 
 
 </div>
 
+
 </div>
+
+
+</div>
+
 
 </div>
 
@@ -1402,31 +1661,38 @@ Confidential Consultation
 
 
 
-<!-- =========================
+<!-- =====================================================
      PRACTICE AREAS
-========================= -->
+===================================================== -->
 
 <section
 class="practice"
 id="practice">
 
+
 <div class="container">
 
 
 <div class="section-label">
+
 Areas of Practice
+
 </div>
 
 
+
 <h2 class="section-title">
+
 Legal Services
+
 </h2>
+
 
 
 <p class="practice-intro">
 
-Legal assistance can vary depending upon the
-facts and circumstances of each matter.
+Legal assistance can vary depending upon
+the facts and circumstances of each matter.
 The following areas can be expanded as your
 professional practice develops.
 
@@ -1437,114 +1703,162 @@ professional practice develops.
 <div class="practice-grid">
 
 
+<!-- 01 -->
+
 <div class="practice-card">
 
 <div class="number">
+
 01
+
 </div>
 
 <h3>
+
 Civil Law
+
 </h3>
 
 <p>
-Assistance relating to civil disputes and
-related legal matters.
+
+Assistance relating to civil disputes
+and related legal matters.
+
 </p>
 
 </div>
 
 
 
+<!-- 02 -->
+
 <div class="practice-card">
 
 <div class="number">
+
 02
+
 </div>
 
 <h3>
+
 Criminal Law
+
 </h3>
 
 <p>
+
 Legal assistance in criminal matters,
 subject to the facts of each case.
+
 </p>
 
 </div>
 
 
 
+<!-- 03 -->
+
 <div class="practice-card">
 
 <div class="number">
+
 03
+
 </div>
 
 <h3>
+
 Family Law
+
 </h3>
 
 <p>
+
 Assistance concerning family and
 matrimonial legal matters.
+
 </p>
 
 </div>
 
 
 
+<!-- 04 -->
+
 <div class="practice-card">
 
 <div class="number">
+
 04
+
 </div>
 
 <h3>
+
 Property Matters
+
 </h3>
 
 <p>
+
 Assistance regarding property-related
 disputes and documentation.
+
 </p>
 
 </div>
 
 
 
+<!-- 05 -->
+
 <div class="practice-card">
 
 <div class="number">
+
 05
+
 </div>
 
 <h3>
+
 Consumer Matters
+
 </h3>
 
 <p>
+
 Assistance concerning consumer disputes
 and related legal remedies.
+
 </p>
 
 </div>
 
 
 
+<!-- 06 -->
+
 <div class="practice-card">
 
 <div class="number">
+
 06
+
 </div>
 
 <h3>
+
 Legal Consultation
+
 </h3>
 
 <p>
+
 Initial discussion and guidance based on
 the information provided by the client.
+
 </p>
 
 </div>
@@ -1558,11 +1872,12 @@ the information provided by the client.
 
 
 
-<!-- =========================
+<!-- =====================================================
      QUOTE
-========================= -->
+===================================================== -->
 
 <section class="quote">
+
 
 <h2>
 
@@ -1573,20 +1888,24 @@ but about understanding the law and protecting rights.”
 
 
 <span>
+
 Rahul Rai
+
 </span>
+
 
 </section>
 
 
 
-<!-- =========================
+<!-- =====================================================
      CONTACT
-========================= -->
+===================================================== -->
 
 <section
 class="contact"
 id="contact">
+
 
 <div class="container">
 
@@ -1596,9 +1915,13 @@ id="contact">
 
 <div>
 
+
 <div class="section-label">
+
 Get In Touch
+
 </div>
+
 
 
 <h2 class="section-title">
@@ -1611,6 +1934,7 @@ your legal matter.
 </h2>
 
 
+
 <div class="gold-line"></div>
 
 
@@ -1620,9 +1944,13 @@ your legal matter.
 
 <div class="contact-item">
 
+
 <strong>
+
 Phone
+
 </strong>
+
 
 <a href="tel:9794442858">
 
@@ -1630,15 +1958,20 @@ Phone
 
 </a>
 
+
 </div>
 
 
 
 <div class="contact-item">
 
+
 <strong>
+
 Email
+
 </strong>
+
 
 <a href="mailto:rahulrairai134@gmail.com">
 
@@ -1646,29 +1979,37 @@ rahulrairai134@gmail.com
 
 </a>
 
+
 </div>
 
 
 
 <div class="contact-item">
 
+
 <strong>
+
 Location
+
 </strong>
+
 
 <span>
 
 Dhanghata, Sant Kabir Nagar,
+
 <br>
 
 Uttar Pradesh, India
 
 </span>
 
+
 </div>
 
 
 </div>
+
 
 </div>
 
@@ -1684,48 +2025,72 @@ onsubmit="sendWhatsApp(event)">
 
 
 <input
+
 type="text"
+
 id="name"
+
 placeholder="Your Name"
+
 required>
 
 
+
 <input
+
 type="tel"
+
 id="phone"
+
 placeholder="Your Phone Number"
+
 required>
 
 
+
 <input
+
 type="email"
+
 id="email"
+
 placeholder="Your Email">
 
 
+
 <textarea
+
 id="message"
+
 placeholder="Briefly describe your enquiry..."
+
 required></textarea>
 
 
+
 <button
+
 class="btn btn-gold"
+
 type="submit">
+
 
 <i class="fa-brands fa-whatsapp"></i>
 
 Send Enquiry
+
 
 </button>
 
 
 </form>
 
+
 </div>
 
 
 </div>
+
 
 </div>
 
@@ -1733,28 +2098,35 @@ Send Enquiry
 
 
 
-<!-- =========================
+<!-- =====================================================
      FOOTER
-========================= -->
+===================================================== -->
 
 <footer>
 
 
 <div class="footer-name">
+
 RAHUL RAI
+
 </div>
 
 
 <div>
+
 Advocate
+
 </div>
+
 
 
 <div class="social">
 
 
 <a
+
 href="tel:9794442858"
+
 aria-label="Call">
 
 <i class="fa-solid fa-phone"></i>
@@ -1762,8 +2134,11 @@ aria-label="Call">
 </a>
 
 
+
 <a
+
 href="mailto:rahulrairai134@gmail.com"
+
 aria-label="Email">
 
 <i class="fa-solid fa-envelope"></i>
@@ -1771,9 +2146,13 @@ aria-label="Email">
 </a>
 
 
+
 <a
+
 href="https://wa.me/919794442858"
+
 target="_blank"
+
 aria-label="WhatsApp">
 
 <i class="fa-brands fa-whatsapp"></i>
@@ -1784,9 +2163,13 @@ aria-label="WhatsApp">
 </div>
 
 
+
 <p>
+
 © 2026 Rahul Rai. All Rights Reserved.
+
 </p>
+
 
 
 <div class="disclaimer">
@@ -1804,40 +2187,51 @@ advocate-client relationship.
 
 
 
-<!-- =========================
-     FLOATING CALL
-========================= -->
+<!-- =====================================================
+     FLOATING CALL BUTTON
+===================================================== -->
 
 <a
+
 class="call-float"
+
 href="tel:9794442858"
+
 title="Call Rahul Rai">
+
 
 <i class="fa-solid fa-phone"></i>
 
+
 </a>
 
 
 
-<!-- =========================
-     FLOATING WHATSAPP
-========================= -->
+<!-- =====================================================
+     FLOATING WHATSAPP BUTTON
+===================================================== -->
 
 <a
+
 class="whatsapp"
+
 href="https://wa.me/919794442858"
+
 target="_blank"
+
 title="Chat on WhatsApp">
+
 
 <i class="fa-brands fa-whatsapp"></i>
 
+
 </a>
 
 
 
-<!-- =========================
+<!-- =====================================================
      JAVASCRIPT
-========================= -->
+===================================================== -->
 
 <script>
 
@@ -1846,20 +2240,20 @@ title="Chat on WhatsApp">
 
 function toggleMenu(){
 
-document
-.getElementById("navLinks")
-.classList
-.toggle("active");
+    document
+    .getElementById("navLinks")
+    .classList
+    .toggle("active");
 
 }
 
 
 function closeMenu(){
 
-document
-.getElementById("navLinks")
-.classList
-.remove("active");
+    document
+    .getElementById("navLinks")
+    .classList
+    .remove("active");
 
 }
 
@@ -1869,64 +2263,64 @@ document
 
 function sendWhatsApp(event){
 
-event.preventDefault();
+    event.preventDefault();
 
 
-const name =
-document
-.getElementById("name")
-.value
-.trim();
+    const name =
+    document
+    .getElementById("name")
+    .value
+    .trim();
 
 
-const phone =
-document
-.getElementById("phone")
-.value
-.trim();
+    const phone =
+    document
+    .getElementById("phone")
+    .value
+    .trim();
 
 
-const email =
-document
-.getElementById("email")
-.value
-.trim();
+    const email =
+    document
+    .getElementById("email")
+    .value
+    .trim();
 
 
-const message =
-document
-.getElementById("message")
-.value
-.trim();
+    const message =
+    document
+    .getElementById("message")
+    .value
+    .trim();
 
 
-const text =
+    const text =
 
-"Legal Enquiry\n\n" +
+    "Legal Enquiry\n\n" +
 
-"Name: " +
-name +
+    "Name: " +
+    name +
 
-"\nPhone: " +
-phone +
+    "\nPhone: " +
+    phone +
 
-"\nEmail: " +
-email +
+    "\nEmail: " +
+    email +
 
-"\n\nMessage:\n" +
+    "\n\nMessage:\n" +
 
-message;
+    message;
 
 
-window.open(
+    window.open(
 
-"https://wa.me/919794442858?text=" +
+        "https://wa.me/919794442858?text=" +
 
-encodeURIComponent(text),
+        encodeURIComponent(text),
 
-"_blank"
+        "_blank"
 
-);
+    );
 
 }
 
@@ -1934,4 +2328,5 @@ encodeURIComponent(text),
 
 
 </body>
+
 </html>
