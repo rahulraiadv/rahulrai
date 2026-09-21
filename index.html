@@ -1,824 +1,1937 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Google Search Console Verification -->
-    <meta name="google-site-verification" content="J2UTtAd2zWaHhOMksTRis8wgG1sigmWtEl3LoJVdriw" />
-
-    <title>Rahul Rai | Advocate</title>
-    <meta name="description" content="Rahul Rai - Advocate, Dhanghata, Sant Kabir Nagar. Legal services and consultation.">
-
-    <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background: #f8f7f3;
-            color: #222;
-            line-height: 1.7;
-        }
-
-        /* NAVBAR */
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            background: rgba(10, 20, 32, 0.96);
-            border-bottom: 1px solid rgba(201, 164, 92, 0.3);
-        }
-
-        nav {
-            max-width: 1200px;
-            margin: auto;
-            height: 78px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 25px;
-        }
-
-        .logo {
-            color: #d4af68;
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 30px;
-            font-weight: 700;
-            letter-spacing: 2px;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 32px;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-size: 13px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: #d4af68;
-        }
-
-        .menu-btn {
-            display: none;
-            color: white;
-            font-size: 28px;
-            cursor: pointer;
-        }
-
-        /* HERO */
-        .hero {
-            min-height: 100vh;
-            background:
-                linear-gradient(rgba(7, 16, 28, 0.78), rgba(7, 16, 28, 0.88)),
-                url("https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=2000&q=85");
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            padding: 120px 25px 80px;
-        }
-
-        .hero-content {
-            max-width: 1200px;
-            width: 100%;
-            margin: auto;
-            color: white;
-        }
-
-        .hero-small {
-            color: #d4af68;
-            text-transform: uppercase;
-            letter-spacing: 5px;
-            font-size: 13px;
-            margin-bottom: 20px;
-        }
-
-        .hero h1 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: clamp(60px, 9vw, 115px);
-            line-height: 0.9;
-            font-weight: 600;
-            margin-bottom: 25px;
-        }
-
-        .hero h2 {
-            font-size: 20px;
-            font-weight: 400;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            color: #e8e8e8;
-            margin-bottom: 25px;
-        }
-
-        .hero p {
-            max-width: 600px;
-            color: #ddd;
-            font-size: 16px;
-            margin-bottom: 35px;
-        }
-
-        .buttons {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 14px 28px;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 12px;
-            letter-spacing: 1.5px;
-            transition: 0.3s;
-        }
-
-        .btn-gold {
-            background: #c9a45c;
-            color: #101a27;
-        }
-
-        .btn-gold:hover {
-            background: #e0c27c;
-            transform: translateY(-2px);
-        }
-
-        .btn-outline {
-            border: 1px solid #d4af68;
-            color: white;
-        }
-
-        .btn-outline:hover {
-            background: #d4af68;
-            color: #111;
-        }
-
-        /* GENERAL */
-        section {
-            padding: 100px 25px;
-        }
-
-        .container {
-            max-width: 1150px;
-            margin: auto;
-        }
-
-        .section-label {
-            color: #b38b45;
-            text-transform: uppercase;
-            letter-spacing: 4px;
-            font-size: 12px;
-            font-weight: 600;
-            margin-bottom: 12px;
-        }
-
-        .section-title {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 55px;
-            line-height: 1;
-            color: #101a27;
-            margin-bottom: 25px;
-        }
-
-        /* ABOUT */
-        .about {
-            background: #fff;
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1.3fr;
-            gap: 70px;
-            align-items: center;
-        }
-
-        .about-image {
-            min-height: 500px;
-            background:
-                linear-gradient(rgba(15, 27, 42, 0.25), rgba(15, 27, 42, 0.25)),
-                url("https://images.unsplash.com/photo-1555374018-13a8994ab246?auto=format&fit=crop&w=900&q=80");
-            background-size: cover;
-            background-position: center;
-        }
-
-        .about-text p {
-            color: #666;
-            margin-bottom: 20px;
-        }
-
-        .gold-line {
-            width: 70px;
-            height: 2px;
-            background: #c9a45c;
-            margin: 25px 0;
-        }
-
-        /* PRACTICE */
-        .practice {
-            background: #f2f0ea;
-        }
-
-        .practice-intro {
-            max-width: 650px;
-            color: #666;
-            margin-bottom: 50px;
-        }
-
-        .practice-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2px;
-        }
-
-        .practice-card {
-            background: #101a27;
-            color: white;
-            padding: 45px 30px;
-            min-height: 220px;
-            transition: 0.3s;
-            border-bottom: 2px solid transparent;
-        }
-
-        .practice-card:hover {
-            transform: translateY(-6px);
-            border-bottom: 2px solid #c9a45c;
-        }
-
-        .number {
-            color: #c9a45c;
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 25px;
-        }
-
-        .practice-card h3 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 29px;
-            margin: 15px 0;
-        }
-
-        .practice-card p {
-            color: #bbb;
-            font-size: 14px;
-        }
-
-        /* QUOTE */
-        .quote {
-            background: #101a27;
-            text-align: center;
-            color: white;
-        }
-
-        .quote h2 {
-            max-width: 850px;
-            margin: auto;
-            font-family: 'Cormorant Garamond', serif;
-            font-size: clamp(38px, 5vw, 65px);
-            line-height: 1.1;
-            font-weight: 500;
-        }
-
-        .quote span {
-            display: block;
-            color: #c9a45c;
-            margin-top: 25px;
-            font-size: 12px;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-        }
-
-        /* CONTACT */
-        .contact {
-            background: white;
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 70px;
-        }
-
-        .contact-info {
-            margin-top: 30px;
-        }
-
-        .contact-item {
-            margin-bottom: 25px;
-        }
-
-        .contact-item strong {
-            display: block;
-            color: #b38b45;
-            text-transform: uppercase;
-            font-size: 11px;
-            letter-spacing: 2px;
-            margin-bottom: 5px;
-        }
-
-        .contact-item a,
-        .contact-item span {
-            color: #333;
-            text-decoration: none;
-            font-size: 16px;
-        }
-
-        .contact-form {
-            background: #f4f2ed;
-            padding: 40px;
-        }
-
-        .contact-form input,
-        .contact-form textarea {
-            width: 100%;
-            border: none;
-            border-bottom: 1px solid #bbb;
-            background: transparent;
-            padding: 15px 5px;
-            margin-bottom: 20px;
-            font-family: inherit;
-            outline: none;
-        }
-
-        .contact-form textarea {
-            min-height: 120px;
-            resize: vertical;
-        }
-
-        .contact-form button {
-            border: none;
-            cursor: pointer;
-        }
-
-        /* FOOTER */
-        footer {
-            background: #08111d;
-            color: #aaa;
-            padding: 45px 25px;
-            text-align: center;
-        }
-
-        footer .footer-name {
-            font-family: 'Cormorant Garamond', serif;
-            color: #d4af68;
-            font-size: 32px;
-            margin-bottom: 8px;
-        }
-
-        footer p {
-            font-size: 12px;
-            margin-top: 15px;
-        }
-
-        .disclaimer {
-            max-width: 850px;
-            margin: 25px auto 0;
-            color: #777;
-            font-size: 10px;
-        }
-
-        /* WHATSAPP */
-        .whatsapp {
-            position: fixed;
-            right: 22px;
-            bottom: 22px;
-            width: 58px;
-            height: 58px;
-            background: #25d366;
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            font-size: 27px;
-            z-index: 999;
-            box-shadow: 0 5px 20px rgba(0,0,0,.25);
-        }
-
-        /* MOBILE */
-        @media (max-width: 800px) {
-
-            .nav-links {
-                display: none;
-                position: absolute;
-                top: 78px;
-                left: 0;
-                width: 100%;
-                background: #101a27;
-                flex-direction: column;
-                padding: 25px;
-                gap: 20px;
-            }
-
-            .nav-links.active {
-                display: flex;
-            }
-
-            .menu-btn {
-                display: block;
-            }
-
-            .about-grid,
-            .contact-grid {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-
-            .about-image {
-                min-height: 350px;
-            }
-
-            .practice-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .section-title {
-                font-size: 45px;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="google-site-verification" content="J2UTtAd2zWaHhOMksTRis8wgG1sigmWtEl3LoJVdriw">
+
+<title>Rahul Rai | Advocate</title>
+
+<meta name="description" content="Rahul Rai - Advocate, Dhanghata, Sant Kabir Nagar. Legal services and consultation.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+/* =========================
+   GLOBAL
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Montserrat',sans-serif;
+    background:#f8f7f3;
+    color:#222;
+    line-height:1.7;
+}
+
+:root{
+    --navy:#0a1420;
+    --navy2:#101a27;
+    --gold:#d4af68;
+    --gold2:#b38b45;
+    --cream:#f8f7f3;
+    --white:#fff;
+}
+
+a{
+    text-decoration:none;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:1000;
+    background:rgba(7,14,23,.96);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid rgba(212,175,104,.25);
+}
+
+nav{
+    max-width:1200px;
+    height:78px;
+    margin:auto;
+    padding:0 25px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    color:white;
+}
+
+.brand-photo{
+    width:48px;
+    height:48px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+    object-position:center top;
+
+    border:2px solid var(--gold);
+
+    box-shadow:
+    0 0 0 3px rgba(212,175,104,.12);
+}
+
+.brand-text{
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:25px;
+    font-weight:700;
+
+    letter-spacing:1.5px;
+
+    color:var(--gold);
+}
+
+.brand-text small{
+    display:block;
+
+    font-family:'Montserrat',sans-serif;
+
+    font-size:8px;
+
+    letter-spacing:2px;
+
+    color:#ddd;
+
+    margin-top:-4px;
+}
+
+.nav-links{
+    display:flex;
+
+    gap:30px;
+
+    list-style:none;
+}
+
+.nav-links a{
+    color:#fff;
+
+    font-size:12px;
+
+    text-transform:uppercase;
+
+    letter-spacing:1.2px;
+
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:var(--gold);
+}
+
+.menu-btn{
+    display:none;
+
+    color:#fff;
+
+    font-size:27px;
+
+    cursor:pointer;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+
+    min-height:100vh;
+
+    background:
+    radial-gradient(
+        circle at 80% 40%,
+        rgba(212,175,104,.10),
+        transparent 30%
+    ),
+
+    linear-gradient(
+        120deg,
+        #060b12 0%,
+        #101722 55%,
+        #090d14 100%
+    );
+
+    display:flex;
+
+    align-items:center;
+
+    padding:
+    125px
+    25px
+    75px;
+
+    overflow:hidden;
+}
+
+.hero-inner{
+
+    max-width:1200px;
+
+    width:100%;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+    1.05fr .95fr;
+
+    align-items:center;
+
+    gap:50px;
+}
+
+.hero-content{
+    color:white;
+}
+
+.hero-small{
+
+    color:var(--gold);
+
+    text-transform:uppercase;
+
+    letter-spacing:5px;
+
+    font-size:12px;
+
+    margin-bottom:18px;
+}
+
+.hero h1{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:
+    clamp(64px,8vw,108px);
+
+    line-height:.85;
+
+    font-weight:600;
+
+    margin-bottom:24px;
+}
+
+.hero h2{
+
+    font-size:18px;
+
+    font-weight:500;
+
+    letter-spacing:5px;
+
+    text-transform:uppercase;
+
+    color:#eee;
+
+    margin-bottom:24px;
+}
+
+.hero p{
+
+    max-width:600px;
+
+    color:#c9ced4;
+
+    font-size:15px;
+
+    margin-bottom:32px;
+}
+
+.buttons{
+
+    display:flex;
+
+    gap:13px;
+
+    flex-wrap:wrap;
+}
+
+.btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:9px;
+
+    padding:14px 25px;
+
+    text-transform:uppercase;
+
+    font-size:11px;
+
+    font-weight:600;
+
+    letter-spacing:1.4px;
+
+    transition:.3s;
+
+    border:1px solid transparent;
+}
+
+.btn-gold{
+
+    background:var(--gold);
+
+    color:#101a27;
+}
+
+.btn-gold:hover{
+
+    background:#e5c985;
+
+    transform:translateY(-2px);
+}
+
+.btn-outline{
+
+    border-color:var(--gold);
+
+    color:white;
+}
+
+.btn-outline:hover{
+
+    background:var(--gold);
+
+    color:#111;
+}
+
+
+/* =========================
+   HERO PHOTO
+========================= */
+
+.hero-photo-wrap{
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-end;
+}
+
+.hero-photo-wrap:before{
+
+    content:"";
+
+    position:absolute;
+
+    width:390px;
+
+    height:390px;
+
+    border:1px solid rgba(212,175,104,.35);
+
+    border-radius:50%;
+
+    right:8%;
+
+    top:7%;
+
+    box-shadow:
+    0 0 70px rgba(212,175,104,.08);
+}
+
+.hero-photo{
+
+    position:relative;
+
+    width:min(100%,560px);
+
+    height:610px;
+
+    object-fit:cover;
+
+    object-position:center top;
+
+    border-radius:2px;
+
+    filter:saturate(.92);
+
+    box-shadow:
+    0 25px 70px rgba(0,0,0,.45);
+}
+
+.photo-tag{
+
+    position:absolute;
+
+    right:10px;
+
+    bottom:25px;
+
+    background:rgba(10,20,32,.92);
+
+    border-left:3px solid var(--gold);
+
+    padding:15px 20px;
+
+    color:white;
+
+    z-index:2;
+}
+
+.photo-tag strong{
+
+    display:block;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:24px;
+
+    color:var(--gold);
+}
+
+.photo-tag span{
+
+    font-size:9px;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+}
+
+
+/* =========================
+   COMMON
+========================= */
+
+section{
+    padding:100px 25px;
+}
+
+.container{
+
+    max-width:1150px;
+
+    margin:auto;
+}
+
+.section-label{
+
+    color:var(--gold2);
+
+    text-transform:uppercase;
+
+    letter-spacing:4px;
+
+    font-size:11px;
+
+    font-weight:700;
+
+    margin-bottom:12px;
+}
+
+.section-title{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:55px;
+
+    line-height:.98;
+
+    color:var(--navy);
+
+    margin-bottom:24px;
+}
+
+.gold-line{
+
+    width:70px;
+
+    height:2px;
+
+    background:var(--gold);
+
+    margin:24px 0;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about{
+    background:#fff;
+}
+
+.about-grid{
+
+    display:grid;
+
+    grid-template-columns:.85fr 1.15fr;
+
+    gap:70px;
+
+    align-items:center;
+}
+
+.about-photo-box{
+
+    position:relative;
+}
+
+.about-photo{
+
+    width:100%;
+
+    height:540px;
+
+    object-fit:cover;
+
+    object-position:center top;
+
+    position:relative;
+
+    z-index:1;
+}
+
+.about-photo-box:after{
+
+    content:"";
+
+    position:absolute;
+
+    left:18px;
+
+    bottom:-18px;
+
+    width:100%;
+
+    height:100%;
+
+    border:1px solid var(--gold);
+
+    z-index:0;
+}
+
+.about-text p{
+
+    color:#666;
+
+    margin-bottom:18px;
+
+    font-size:15px;
+}
+
+.credentials{
+
+    display:flex;
+
+    gap:10px;
+
+    flex-wrap:wrap;
+
+    margin-top:25px;
+}
+
+.credential{
+
+    padding:10px 14px;
+
+    background:#f4f1e9;
+
+    border-left:2px solid var(--gold);
+
+    font-size:11px;
+
+    font-weight:600;
+
+    letter-spacing:.4px;
+}
+
+
+/* =========================
+   PRACTICE AREAS
+========================= */
+
+.practice{
+
+    background:#f2f0ea;
+}
+
+.practice-intro{
+
+    max-width:700px;
+
+    color:#666;
+
+    margin-bottom:48px;
+}
+
+.practice-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:2px;
+}
+
+.practice-card{
+
+    background:var(--navy2);
+
+    color:white;
+
+    padding:38px 30px;
+
+    min-height:225px;
+
+    transition:.3s;
+
+    border-bottom:2px solid transparent;
+}
+
+.practice-card:hover{
+
+    transform:translateY(-6px);
+
+    border-bottom-color:var(--gold);
+}
+
+.number{
+
+    color:var(--gold);
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:24px;
+}
+
+.practice-card h3{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:29px;
+
+    margin:13px 0 10px;
+}
+
+.practice-card p{
+
+    color:#b9bec5;
+
+    font-size:13px;
+}
+
+
+/* =========================
+   QUOTE
+========================= */
+
+.quote{
+
+    background:var(--navy2);
+
+    text-align:center;
+
+    color:white;
+
+    padding:105px 25px;
+}
+
+.quote h2{
+
+    max-width:850px;
+
+    margin:auto;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:
+    clamp(38px,5vw,64px);
+
+    line-height:1.08;
+
+    font-weight:500;
+}
+
+.quote span{
+
+    display:block;
+
+    color:var(--gold);
+
+    margin-top:25px;
+
+    font-size:11px;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact{
+    background:#fff;
+}
+
+.contact-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:70px;
+}
+
+.contact-info{
+
+    margin-top:28px;
+}
+
+.contact-item{
+
+    margin-bottom:25px;
+}
+
+.contact-item strong{
+
+    display:block;
+
+    color:var(--gold2);
+
+    text-transform:uppercase;
+
+    font-size:10px;
+
+    letter-spacing:2px;
+
+    margin-bottom:5px;
+}
+
+.contact-item a,
+.contact-item span{
+
+    color:#333;
+
+    font-size:15px;
+}
+
+.contact-item a:hover{
+
+    color:var(--gold2);
+}
+
+.contact-form{
+
+    background:#f4f2ed;
+
+    padding:40px;
+}
+
+.contact-form input,
+.contact-form textarea{
+
+    width:100%;
+
+    border:none;
+
+    border-bottom:1px solid #bbb;
+
+    background:transparent;
+
+    padding:14px 5px;
+
+    margin-bottom:18px;
+
+    font-family:inherit;
+
+    outline:none;
+
+    font-size:14px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+
+    border-bottom-color:var(--gold2);
+}
+
+.contact-form textarea{
+
+    min-height:125px;
+
+    resize:vertical;
+}
+
+.contact-form button{
+
+    border:none;
+
+    cursor:pointer;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+
+    background:#08111d;
+
+    color:#aaa;
+
+    padding:45px 25px;
+
+    text-align:center;
+}
+
+.footer-name{
+
+    font-family:'Cormorant Garamond',serif;
+
+    color:var(--gold);
+
+    font-size:32px;
+
+    margin-bottom:4px;
+}
+
+footer .social{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:12px;
+
+    margin:18px 0;
+}
+
+footer .social a{
+
+    width:38px;
+
+    height:38px;
+
+    border:1px solid rgba(212,175,104,.4);
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:#ddd;
+
+    transition:.3s;
+}
+
+footer .social a:hover{
+
+    color:var(--gold);
+
+    border-color:var(--gold);
+}
+
+footer p{
+
+    font-size:11px;
+
+    margin-top:15px;
+}
+
+.disclaimer{
+
+    max-width:850px;
+
+    margin:22px auto 0;
+
+    color:#666;
+
+    font-size:9px;
+}
+
+
+/* =========================
+   FLOATING BUTTONS
+========================= */
+
+.whatsapp,
+.call-float{
+
+    position:fixed;
+
+    right:20px;
+
+    width:54px;
+
+    height:54px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:23px;
+
+    z-index:999;
+
+    box-shadow:
+    0 5px 20px rgba(0,0,0,.25);
+
+    transition:.3s;
+}
+
+.whatsapp{
+
+    bottom:22px;
+
+    background:#25d366;
+}
+
+.call-float{
+
+    bottom:88px;
+
+    background:var(--navy2);
+}
+
+.whatsapp:hover,
+.call-float:hover{
+
+    transform:scale(1.08);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:850px){
+
+    nav{
+
+        height:70px;
+
+        padding:0 18px;
+    }
+
+    .brand-photo{
+
+        width:43px;
+
+        height:43px;
+    }
+
+    .brand-text{
+
+        font-size:23px;
+    }
+
+    .nav-links{
+
+        display:none;
+
+        position:absolute;
+
+        top:70px;
+
+        left:0;
+
+        width:100%;
+
+        background:#101a27;
+
+        flex-direction:column;
+
+        padding:24px;
+
+        gap:20px;
+    }
+
+    .nav-links.active{
+
+        display:flex;
+    }
+
+    .menu-btn{
+
+        display:block;
+    }
+
+    .hero{
+
+        padding-top:110px;
+    }
+
+    .hero-inner{
+
+        grid-template-columns:1fr;
+
+        gap:35px;
+    }
+
+    .hero-content{
+
+        text-align:center;
+    }
+
+    .hero p{
+
+        margin-left:auto;
+
+        margin-right:auto;
+    }
+
+    .buttons{
+
+        justify-content:center;
+    }
+
+    .hero-photo{
+
+        height:520px;
+
+        max-width:500px;
+    }
+
+    .hero-photo-wrap:before{
+
+        display:none;
+    }
+
+    .about-grid,
+    .contact-grid{
+
+        grid-template-columns:1fr;
+
+        gap:45px;
+    }
+
+    .about-photo{
+
+        height:450px;
+    }
+
+    .practice-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .section-title{
+
+        font-size:46px;
+    }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media(max-width:500px){
+
+    section{
+
+        padding:75px 18px;
+    }
+
+    .hero{
+
+        padding-left:18px;
+
+        padding-right:18px;
+    }
+
+    .hero h1{
+
+        font-size:62px;
+    }
+
+    .hero h2{
+
+        font-size:15px;
+
+        letter-spacing:3px;
+    }
+
+    .hero-photo{
+
+        height:430px;
+    }
+
+    .about-photo{
+
+        height:380px;
+    }
+
+    .contact-form{
+
+        padding:25px 20px;
+    }
+
+    .photo-tag{
+
+        right:0;
+
+        bottom:15px;
+    }
+
+    .call-float{
+
+        bottom:84px;
+    }
+}
+
+</style>
 </head>
+
 
 <body>
 
-<!-- NAVIGATION -->
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
 <header>
-    <nav>
-        <div class="logo">RAHUL RAI</div>
 
-        <div class="menu-btn" onclick="toggleMenu()">☰</div>
+<nav>
 
-        <ul class="nav-links" id="navLinks">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#practice">Practice Areas</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+<a href="#home" class="brand">
+
+<img
+src="rahul-rai.png"
+class="brand-photo"
+alt="Rahul Rai Advocate">
+
+<span class="brand-text">
+
+RAHUL RAI
+
+<small>ADVOCATE</small>
+
+</span>
+
+</a>
+
+
+<div
+class="menu-btn"
+onclick="toggleMenu()">
+
+<i class="fa-solid fa-bars"></i>
+
+</div>
+
+
+<ul
+class="nav-links"
+id="navLinks">
+
+<li>
+<a href="#home" onclick="closeMenu()">
+Home
+</a>
+</li>
+
+<li>
+<a href="#about" onclick="closeMenu()">
+About
+</a>
+</li>
+
+<li>
+<a href="#practice" onclick="closeMenu()">
+Practice Areas
+</a>
+</li>
+
+<li>
+<a href="#contact" onclick="closeMenu()">
+Contact
+</a>
+</li>
+
+</ul>
+
+</nav>
+
 </header>
 
 
-<!-- HERO -->
-<section class="hero" id="home">
-    <div class="hero-content">
 
-        <div class="hero-small">Legal Professional</div>
+<!-- =========================
+     HERO
+========================= -->
 
-        <h1>Rahul Rai</h1>
+<section
+class="hero"
+id="home">
 
-        <h2>Advocate</h2>
+<div class="hero-inner">
 
-        <p>
-            Providing professional legal assistance with a commitment
-            to integrity, responsibility and the pursuit of justice.
-        </p>
 
-        <div class="buttons">
-            <a href="#contact" class="btn btn-gold">
-                Contact Me
-            </a>
+<div class="hero-content">
 
-            <a href="tel:9794442858" class="btn btn-outline">
-                Call Now
-            </a>
-        </div>
+<div class="hero-small">
+Legal Professional
+</div>
 
-    </div>
+
+<h1>
+Rahul Rai
+</h1>
+
+
+<h2>
+Advocate
+</h2>
+
+
+<div class="gold-line"></div>
+
+
+<p>
+Providing professional legal assistance with a commitment
+to integrity, responsibility and the pursuit of justice.
+</p>
+
+
+<div class="buttons">
+
+<a
+href="#contact"
+class="btn btn-gold">
+
+<i class="fa-regular fa-calendar"></i>
+
+Contact Me
+
+</a>
+
+
+<a
+href="tel:9794442858"
+class="btn btn-outline">
+
+<i class="fa-solid fa-phone"></i>
+
+Call Now
+
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- HERO PHOTO -->
+
+<div class="hero-photo-wrap">
+
+<img
+src="rahul-rai.png"
+class="hero-photo"
+alt="Rahul Rai - Advocate">
+
+
+<div class="photo-tag">
+
+<strong>
+Rahul Rai
+</strong>
+
+<span>
+Advocate · Legal Professional
+</span>
+
+</div>
+
+</div>
+
+
+</div>
+
 </section>
 
 
-<!-- ABOUT -->
-<section class="about" id="about">
-    <div class="container">
 
-        <div class="about-grid">
+<!-- =========================
+     ABOUT
+========================= -->
 
-            <div class="about-image"></div>
+<section
+class="about"
+id="about">
 
-            <div class="about-text">
+<div class="container">
 
-                <div class="section-label">About</div>
+<div class="about-grid">
 
-                <h2 class="section-title">
-                    A commitment to<br>
-                    legal excellence.
-                </h2>
 
-                <div class="gold-line"></div>
+<div class="about-photo-box">
 
-                <p>
-                    Welcome to the official website of Rahul Rai.
-                    This platform is designed to provide information
-                    about legal services and professional assistance.
-                </p>
+<img
+src="rahul-rai.png"
+class="about-photo"
+alt="Rahul Rai Advocate">
 
-                <p>
-                    Based in Dhanghata, Sant Kabir Nagar, Rahul Rai
-                    is committed to approaching legal matters with
-                    professionalism, integrity and dedication.
-                </p>
+</div>
 
-                <p>
-                    For legal enquiries or consultation-related
-                    information, please get in touch using the
-                    contact details provided below.
-                </p>
 
-            </div>
 
-        </div>
+<div class="about-text">
 
-    </div>
+<div class="section-label">
+About
+</div>
+
+
+<h2 class="section-title">
+
+A commitment to
+<br>
+
+legal excellence.
+
+</h2>
+
+
+<div class="gold-line"></div>
+
+
+<p>
+Welcome to the official website of Rahul Rai.
+This platform is designed to provide information
+about legal services and professional assistance.
+</p>
+
+
+<p>
+Based in Dhanghata, Sant Kabir Nagar, Rahul Rai
+is committed to approaching legal matters with
+professionalism, integrity and dedication.
+</p>
+
+
+<p>
+For legal enquiries or consultation-related
+information, please get in touch using the
+contact details provided below.
+</p>
+
+
+<div class="credentials">
+
+<div class="credential">
+Professional Legal Assistance
+</div>
+
+<div class="credential">
+Client-Focused Approach
+</div>
+
+<div class="credential">
+Confidential Consultation
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</div>
+
 </section>
 
 
-<!-- PRACTICE AREAS -->
-<section class="practice" id="practice">
 
-    <div class="container">
+<!-- =========================
+     PRACTICE AREAS
+========================= -->
 
-        <div class="section-label">Areas of Practice</div>
+<section
+class="practice"
+id="practice">
 
-        <h2 class="section-title">
-            Legal Services
-        </h2>
-
-        <p class="practice-intro">
-            Legal assistance can vary depending upon the facts and
-            circumstances of each matter. The following areas can be
-            expanded as your professional practice develops.
-        </p>
+<div class="container">
 
 
-        <div class="practice-grid">
-
-            <div class="practice-card">
-                <div class="number">01</div>
-                <h3>Civil Law</h3>
-                <p>
-                    Assistance relating to civil disputes and
-                    related legal matters.
-                </p>
-            </div>
+<div class="section-label">
+Areas of Practice
+</div>
 
 
-            <div class="practice-card">
-                <div class="number">02</div>
-                <h3>Criminal Law</h3>
-                <p>
-                    Legal assistance in criminal matters,
-                    subject to the facts of each case.
-                </p>
-            </div>
+<h2 class="section-title">
+Legal Services
+</h2>
 
 
-            <div class="practice-card">
-                <div class="number">03</div>
-                <h3>Family Law</h3>
-                <p>
-                    Assistance concerning family and
-                    matrimonial legal matters.
-                </p>
-            </div>
+<p class="practice-intro">
+
+Legal assistance can vary depending upon the
+facts and circumstances of each matter.
+The following areas can be expanded as your
+professional practice develops.
+
+</p>
 
 
-            <div class="practice-card">
-                <div class="number">04</div>
-                <h3>Property Matters</h3>
-                <p>
-                    Assistance regarding property-related
-                    disputes and documentation.
-                </p>
-            </div>
+
+<div class="practice-grid">
 
 
-            <div class="practice-card">
-                <div class="number">05</div>
-                <h3>Consumer Matters</h3>
-                <p>
-                    Assistance concerning consumer disputes
-                    and related legal remedies.
-                </p>
-            </div>
+<div class="practice-card">
+
+<div class="number">
+01
+</div>
+
+<h3>
+Civil Law
+</h3>
+
+<p>
+Assistance relating to civil disputes and
+related legal matters.
+</p>
+
+</div>
 
 
-            <div class="practice-card">
-                <div class="number">06</div>
-                <h3>Legal Consultation</h3>
-                <p>
-                    Initial discussion and guidance based on
-                    the information provided by the client.
-                </p>
-            </div>
 
-        </div>
+<div class="practice-card">
 
-    </div>
+<div class="number">
+02
+</div>
+
+<h3>
+Criminal Law
+</h3>
+
+<p>
+Legal assistance in criminal matters,
+subject to the facts of each case.
+</p>
+
+</div>
+
+
+
+<div class="practice-card">
+
+<div class="number">
+03
+</div>
+
+<h3>
+Family Law
+</h3>
+
+<p>
+Assistance concerning family and
+matrimonial legal matters.
+</p>
+
+</div>
+
+
+
+<div class="practice-card">
+
+<div class="number">
+04
+</div>
+
+<h3>
+Property Matters
+</h3>
+
+<p>
+Assistance regarding property-related
+disputes and documentation.
+</p>
+
+</div>
+
+
+
+<div class="practice-card">
+
+<div class="number">
+05
+</div>
+
+<h3>
+Consumer Matters
+</h3>
+
+<p>
+Assistance concerning consumer disputes
+and related legal remedies.
+</p>
+
+</div>
+
+
+
+<div class="practice-card">
+
+<div class="number">
+06
+</div>
+
+<h3>
+Legal Consultation
+</h3>
+
+<p>
+Initial discussion and guidance based on
+the information provided by the client.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
 </section>
 
 
-<!-- QUOTE -->
+
+<!-- =========================
+     QUOTE
+========================= -->
+
 <section class="quote">
 
-    <h2>
-        “Justice is not merely about winning a case,
-        but about understanding the law and protecting rights.”
-    </h2>
+<h2>
 
-    <span>Rahul Rai</span>
+“Justice is not merely about winning a case,
+but about understanding the law and protecting rights.”
+
+</h2>
+
+
+<span>
+Rahul Rai
+</span>
 
 </section>
 
 
-<!-- CONTACT -->
-<section class="contact" id="contact">
 
-    <div class="container">
+<!-- =========================
+     CONTACT
+========================= -->
 
-        <div class="contact-grid">
+<section
+class="contact"
+id="contact">
 
-            <div>
-
-                <div class="section-label">Get In Touch</div>
-
-                <h2 class="section-title">
-                    Let's discuss<br>
-                    your legal matter.
-                </h2>
-
-                <div class="contact-info">
-
-                    <div class="contact-item">
-                        <strong>Phone</strong>
-                        <a href="tel:9794442858">
-                            +91 97944 42858
-                        </a>
-                    </div>
-
-                    <div class="contact-item">
-                        <strong>Email</strong>
-                        <a href="mailto:rahulrairai134@gmail.com">
-                            rahulrairai134@gmail.com
-                        </a>
-                    </div>
-
-                    <div class="contact-item">
-                        <strong>Location</strong>
-                        <span>
-                            Dhanghata, Sant Kabir Nagar,
-                            Uttar Pradesh, India
-                        </span>
-                    </div>
-
-                </div>
-
-            </div>
+<div class="container">
 
 
-            <div class="contact-form">
+<div class="contact-grid">
 
-                <form onsubmit="sendWhatsApp(event)">
 
-                    <input
-                        type="text"
-                        id="name"
-                        placeholder="Your Name"
-                        required
-                    >
+<div>
 
-                    <input
-                        type="tel"
-                        id="phone"
-                        placeholder="Your Phone Number"
-                        required
-                    >
+<div class="section-label">
+Get In Touch
+</div>
 
-                    <input
-                        type="email"
-                        id="email"
-                        placeholder="Your Email"
-                    >
 
-                    <textarea
-                        id="message"
-                        placeholder="Briefly describe your enquiry..."
-                        required
-                    ></textarea>
+<h2 class="section-title">
 
-                    <button class="btn btn-gold" type="submit">
-                        Send Enquiry
-                    </button>
+Let's discuss
+<br>
 
-                </form>
+your legal matter.
 
-            </div>
+</h2>
 
-        </div>
 
-    </div>
+<div class="gold-line"></div>
+
+
+
+<div class="contact-info">
+
+
+<div class="contact-item">
+
+<strong>
+Phone
+</strong>
+
+<a href="tel:9794442858">
+
++91 97944 42858
+
+</a>
+
+</div>
+
+
+
+<div class="contact-item">
+
+<strong>
+Email
+</strong>
+
+<a href="mailto:rahulrairai134@gmail.com">
+
+rahulrairai134@gmail.com
+
+</a>
+
+</div>
+
+
+
+<div class="contact-item">
+
+<strong>
+Location
+</strong>
+
+<span>
+
+Dhanghata, Sant Kabir Nagar,
+<br>
+
+Uttar Pradesh, India
+
+</span>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+
+<!-- CONTACT FORM -->
+
+<div class="contact-form">
+
+
+<form
+onsubmit="sendWhatsApp(event)">
+
+
+<input
+type="text"
+id="name"
+placeholder="Your Name"
+required>
+
+
+<input
+type="tel"
+id="phone"
+placeholder="Your Phone Number"
+required>
+
+
+<input
+type="email"
+id="email"
+placeholder="Your Email">
+
+
+<textarea
+id="message"
+placeholder="Briefly describe your enquiry..."
+required></textarea>
+
+
+<button
+class="btn btn-gold"
+type="submit">
+
+<i class="fa-brands fa-whatsapp"></i>
+
+Send Enquiry
+
+</button>
+
+
+</form>
+
+</div>
+
+
+</div>
+
+</div>
+
 </section>
 
 
-<!-- FOOTER -->
+
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
 
-    <div class="footer-name">
-        RAHUL RAI
-    </div>
 
-    <div>Advocate</div>
+<div class="footer-name">
+RAHUL RAI
+</div>
 
-    <p>
-        © 2026 Rahul Rai. All Rights Reserved.
-    </p>
 
-    <div class="disclaimer">
-        DISCLAIMER: The information contained on this website
-        is intended for general informational purposes only and
-        should not be construed as legal advice. Visiting this
-        website or communicating through it does not create an
-        advocate-client relationship.
-    </div>
+<div>
+Advocate
+</div>
+
+
+<div class="social">
+
+
+<a
+href="tel:9794442858"
+aria-label="Call">
+
+<i class="fa-solid fa-phone"></i>
+
+</a>
+
+
+<a
+href="mailto:rahulrairai134@gmail.com"
+aria-label="Email">
+
+<i class="fa-solid fa-envelope"></i>
+
+</a>
+
+
+<a
+href="https://wa.me/919794442858"
+target="_blank"
+aria-label="WhatsApp">
+
+<i class="fa-brands fa-whatsapp"></i>
+
+</a>
+
+
+</div>
+
+
+<p>
+© 2026 Rahul Rai. All Rights Reserved.
+</p>
+
+
+<div class="disclaimer">
+
+DISCLAIMER: The information contained on this website
+is intended for general informational purposes only and
+should not be construed as legal advice. Visiting this
+website or communicating through it does not create an
+advocate-client relationship.
+
+</div>
+
 
 </footer>
 
 
-<!-- WHATSAPP -->
+
+<!-- =========================
+     FLOATING CALL
+========================= -->
+
 <a
-    class="whatsapp"
-    href="https://wa.me/919794442858"
-    target="_blank"
-    title="Chat on WhatsApp"
->
-    ☎
+class="call-float"
+href="tel:9794442858"
+title="Call Rahul Rai">
+
+<i class="fa-solid fa-phone"></i>
+
 </a>
 
 
+
+<!-- =========================
+     FLOATING WHATSAPP
+========================= -->
+
+<a
+class="whatsapp"
+href="https://wa.me/919794442858"
+target="_blank"
+title="Chat on WhatsApp">
+
+<i class="fa-brands fa-whatsapp"></i>
+
+</a>
+
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
 <script>
 
-    // Mobile Menu
-    function toggleMenu() {
-        document
-            .getElementById("navLinks")
-            .classList.toggle("active");
-    }
+
+/* MOBILE MENU */
+
+function toggleMenu(){
+
+document
+.getElementById("navLinks")
+.classList
+.toggle("active");
+
+}
 
 
-    // WhatsApp Enquiry
-    function sendWhatsApp(event) {
+function closeMenu(){
 
-        event.preventDefault();
+document
+.getElementById("navLinks")
+.classList
+.remove("active");
 
-        const name =
-            document.getElementById("name").value;
-
-        const phone =
-            document.getElementById("phone").value;
-
-        const email =
-            document.getElementById("email").value;
-
-        const message =
-            document.getElementById("message").value;
+}
 
 
-        const text =
-            "Legal Enquiry%0A%0A" +
-            "Name: " + encodeURIComponent(name) +
-            "%0APhone: " + encodeURIComponent(phone) +
-            "%0AEmail: " + encodeURIComponent(email) +
-            "%0A%0AMessage:%0A" +
-            encodeURIComponent(message);
+
+/* WHATSAPP ENQUIRY */
+
+function sendWhatsApp(event){
+
+event.preventDefault();
 
 
-        window.open(
-            "https://wa.me/919794442858?text=" + text,
-            "_blank"
-        );
-    }
+const name =
+document
+.getElementById("name")
+.value
+.trim();
+
+
+const phone =
+document
+.getElementById("phone")
+.value
+.trim();
+
+
+const email =
+document
+.getElementById("email")
+.value
+.trim();
+
+
+const message =
+document
+.getElementById("message")
+.value
+.trim();
+
+
+const text =
+
+"Legal Enquiry\n\n" +
+
+"Name: " +
+name +
+
+"\nPhone: " +
+phone +
+
+"\nEmail: " +
+email +
+
+"\n\nMessage:\n" +
+
+message;
+
+
+window.open(
+
+"https://wa.me/919794442858?text=" +
+
+encodeURIComponent(text),
+
+"_blank"
+
+);
+
+}
 
 </script>
+
 
 </body>
 </html>
